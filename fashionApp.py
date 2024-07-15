@@ -230,10 +230,10 @@ def flashyStatements(model):
 
         return response
 
-# pdf_files = ['fashion_trending_news.pdf', 'Fashion_Analysis_report.pdf', 'socialMedia_trending_report.pdf']  # Replace with your PDF file paths
-# output_pdf_path = 'final_fashion_text.pdf'
-# merge_pdfs(pdf_files, output_pdf_path)
-# print(f"Merged PDF saved as {output_pdf_path}")
+pdf_files = ['fashion_trending_news.pdf', 'Fashion_Analysis_report.pdf', 'socialMedia_trending_report.pdf']  # Replace with your PDF file paths
+output_pdf_path = 'final_fashion_text.pdf'
+merge_pdfs(pdf_files, output_pdf_path)
+print(f"Merged PDF saved as {output_pdf_path}")
 doc = pdfToText('final_fashion_text.pdf')
 textSplitter = TextSplitter()
 chunks = textSplitter.create_chunks(doc, 500, 20)
